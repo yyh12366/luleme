@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Data
+db.json
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System
+.DS_Store
+

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --spacing-xs: 2px;
+    --spacing-sm: 6px;
+    --spacing-md: 10px;
+}
+
+body {
+    @apply bg-[#f8fafc] text-[#1e293b];
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+/* Custom styles that are too complex for one-off utility classes or need special handling */
+.calendar-day.checked {
+    @apply bg-primary-gradient text-white font-black shadow-lg shadow-indigo-500/30 border-none !important;
+}
+
+.calendar-day.today {
+    @apply border-2 border-indigo-600 text-indigo-600 font-extrabold;
+}
+
+.item-badge.url {
+    @apply bg-blue-100 text-blue-700;
+}
+
+.item-badge.code {
+    @apply bg-amber-100 text-amber-800;
+}
+
+.footer-btn.copy {
+    @apply bg-slate-100 text-slate-800;
+}
+
+.footer-btn.delete {
+    @apply bg-rose-50 text-rose-600;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.confetti {
+    @apply absolute w-2.5 h-2.5 -top-2.5 opacity-80;
+    animation: fall linear forwards;
+}
