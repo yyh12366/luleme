@@ -86,8 +86,8 @@ app.post('/api/data', async (req, res) => {
     }
 });
 
-// Fallback to index.html for SPA
-app.get('/:path*', (req, res) => {
+// Fallback to index.html for SPA - Place this after all other routes
+app.use((req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
